@@ -81,9 +81,7 @@ NativeProxy::NativeProxy(
       layoutAnimations_(std::move(layoutAnimations)) {
   commonInit(fabricUIManager);
 }
-#endif // RCT_NEW_ARCH_ENABLED
 
-#ifdef RCT_NEW_ARCH_ENABLED
 void NativeProxy::commonInit(
     jni::alias_ref<facebook::react::JFabricUIManager::javaobject>
         &fabricUIManager) {

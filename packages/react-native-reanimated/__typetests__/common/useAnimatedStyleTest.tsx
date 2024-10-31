@@ -17,11 +17,11 @@ function UseAnimatedStyleTest() {
   }
 
   function UseAnimatedStyleTest2() {
-    const svBool = useSharedValue('0');
+    const sv = useSharedValue('0');
     // @ts-expect-error properly detects illegal type
     const animatedStyle = useAnimatedStyle(() => {
       return {
-        width: svBool.value,
+        width: sv.value,
       };
     });
     return <Animated.View style={animatedStyle} />;
